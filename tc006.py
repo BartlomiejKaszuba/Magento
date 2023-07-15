@@ -1,6 +1,6 @@
 # Automated system testing of an e-commerce store 'Magento'.
 
-# Test case 6 (TC006) - account registration.
+# Test case 6 (TC006) - logging in.
 
 import pytest
 from selenium import webdriver
