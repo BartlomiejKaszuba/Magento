@@ -31,10 +31,12 @@ driver.find_element(By.XPATH, '//*[@id="send2"]').click()
 # Test step 1 - click on "My wishlist".
 
 driver.find_element(By.XPATH, '//*[@id="top"]/body/div/div/div[2]/div/div[1]/div/div[2]/ul/li[8]/a').click()
+sleep(5)
 
 # Test step 2 - add the product to cart and proceed to checkout.
 
-driver.find_element(By.XPATH, '//*[contains(@id, "item_")]').click()
+driver.find_element(By.XPATH, '//*[@title="Add to Cart"]').click()
+sleep(5)
 driver.find_element(By.XPATH, '//*[@id="top"]/body/div/div/div[2]/div/div/div/div[1]/ul/li/button').click()
 
 # Test step 3 - enter shipping information and click "Estimate".
@@ -46,8 +48,6 @@ city = 'New York'
 postcode = '542896'
 phone = '123456789'
 
-select = Select(driver.find_element(By.XPATH, '//*[@id="billing-address-select"]'))
-select.select_by_visible_text('New Address')
 driver.find_element(By.ID, 'billing:street1').send_keys(address)
 driver.find_element(By.ID, 'billing:city').send_keys(city)
 select = Select(driver.find_element(By.ID, 'billing:region_id'))
