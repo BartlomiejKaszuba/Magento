@@ -33,7 +33,6 @@ for price in prices:
     price_str1 = price_str.replace('.00', '')
     price_str2 = price_str1.replace('$', '')
     price_int = int(price_str2)
-    print(price_int)
     try:
         assert 0 <= price_int <= 150
     except AssertionError:
@@ -59,7 +58,6 @@ for price in prices:
     price_str1 = price_str.replace('.00', '')
     price_str2 = price_str1.replace('$', '')
     price_int = int(price_str2)
-    print(price_int)
     try:
         assert 200 <= price_int <= 1000
     except AssertionError:
